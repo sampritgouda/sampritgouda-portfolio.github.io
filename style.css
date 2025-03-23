@@ -1,0 +1,629 @@
+html,body{
+    padding: 0;
+    margin: 0;
+}
+body{
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+}
+
+.section{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    opacity: 0;
+    transition: opacity 0.9s ;
+
+}
+.section.vissible{
+    opacity: 1;
+}
+
+.navbar{
+    position: sticky;
+    top: 0;
+    z-index: 1000; 
+    width: 100%;
+    height: 65px;
+    background-color: blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-contents{
+    margin-left: -150px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    
+    
+}
+.content{
+    list-style: none;
+    width: 80px;
+    height: 20px;
+    background-color: blue;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+    gap: 5px;
+}
+.nav-contents li.nav-change{
+    background-color: blueviolet;
+}
+.content:hover{
+    border-bottom: 1px solid white;
+}
+.content i{
+    font-size: 20px;
+}
+.icon{
+    margin-left: 80px;
+    font-size: 42px;
+    color: red;
+    font-family: 'Brush Script MT', cursive;
+}
+
+.explain{
+    height: 100%;
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+  
+}
+.poto{
+    height: 100%;
+    width:50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+   
+}
+.image{
+    
+    margin-bottom: 50px;
+    height:350px;
+    width: 350px;
+    margin-top: 100px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-left: 150px;
+    background: url(sampritg.jpg);
+    filter: brightness(65%);
+    background-size: cover;
+    animation: border 2s infinite;
+    box-shadow: 0 0 10px blueviolet;
+    box-shadow: 0 0 20px burlywood;
+    animation: float 3s ease-in-out infinite; /* Floating animation */
+                     
+   
+}
+.explain h1{
+    font-size: 70px;
+}
+.name{
+    color: blue;
+}
+@keyframes border{
+    0%{
+        border-top: 2px solid white;
+    }
+    25%{
+        border-right:2px solid white ;
+    }
+    50%{
+        border-bottom:2px solid white ; 
+    }
+    75%{
+        border-left:2px solid white ; 
+    }
+    100%{
+        border: 2px solid black;
+    }
+}
+.contact{
+    height: 25px;
+    width: 60px;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+   
+    margin-left: -350px;
+    
+
+}
+.type{
+    
+    border-right: 2px solid white;
+    overflow: hidden;
+    animation: typing 3s infinite,blink 2s infinite;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    
+}
+@keyframes typing{
+    0%{
+        width:0;
+    }
+    100%{
+        width: 100%;
+    }
+}
+@keyframes blink{
+    50%{
+        border-right: none;
+    }
+}
+.text{
+    font-size: 50px;
+    color: white;
+}
+
+
+.col1{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+   
+.col2{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: flex-start;
+ 
+    
+}
+.image-box{
+    height: 70%;
+    width: 70%;
+    margin-top: 100PX;
+    background-color: black;
+    overflow: hidden;
+    border-radius: 42px;
+    box-shadow: 0 0 20px rgba(182, 13, 13, 0.362);
+    animation: float 3s ease-in-out infinite; /* Floating animation */
+   
+
+
+    border: 1px solid grey;
+}
+.image2{
+   
+    background: url(sampritg1.jpeg);
+    filter: brightness(60%);
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+   
+}
+.col2r1{
+    margin-top: 70px;
+}
+.col2r1 h1{
+    color: red;
+    font-size: 50px;
+}
+.col2r3{
+    width: 150px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    
+  
+    
+}
+.se{
+    width: 70px;
+    height: 27px;
+    border-radius: 10px;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.col2r4{
+    width: 100%;
+    height: 300px;
+   
+    display: flex;
+}
+.col{
+    width: 100%;
+    height: 80%;
+    background-color: blue;
+    border: 2px solid blue;
+    border-radius: 20px;
+
+    display: flex;
+    
+    justify-content: space-around;
+    align-items: center;
+}
+.main{
+    color: red;
+ 
+}
+.education-col{
+   
+   display: none;
+}
+.skills-col{
+  display: none;
+
+}
+
+.tech{
+    width: 80%;
+    height: 85%;
+    display: flex;
+    margin-top: 80px;
+    margin-bottom: -30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    /* border-right: 2px solid blue;
+    border-top: 2px solid blue; */
+
+    background-color: rgba(0, 0, 0, 0.145);
+    border-radius: 30px;
+    background-size: contain;
+    animation: float 3s ease-in-out infinite; /* Floating animation */
+
+
+}
+.tech h3{
+    margin-top: -20px;
+    margin-left: 20px;
+    color: red;
+    width: 80%;
+    border: 2px solid white;
+    border-radius: 20px;
+    height: 30px;
+    text-align: center;
+    background-color: #D3D3D3;
+   
+}
+.techn{
+    width: 80%;
+    height: 80px;
+    margin-top: -80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   
+    padding: 5px 0;
+    background-color: black;
+}
+.loader{
+    width:80%;
+    height: 20px;
+   border:2px solid white;
+   border-radius: 10px;
+    display: flex;
+}
+.loadcol
+{
+    border-radius: 10px;
+}
+.load{
+    width: 80%;
+    height: 100%;
+    background-color: green;
+}
+.load1{
+    width: 75%;
+    height: 100%;
+    background-color:green;
+}
+.load2{
+    width: 70%;
+    height: 100%;
+    background-color: green;
+}
+.load3 {
+    width: 60%;
+    height: 100%;
+    background-color: green;
+}
+.load4{
+    width: 85%;
+    height: 100%;
+    background-color: green;
+}
+.load5{
+    width: 92%;
+    height: 100%;
+    background-color: green;
+}
+.heading{
+    width: 300px;
+    height: 40px;
+   
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: red;
+    
+    font-family: Georgia, serif;
+ 
+}
+.tech:first-child{
+    justify-self: flex-start;
+
+}
+.techbox{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    margin-top: 40px;
+    flex-direction: column;
+    justify-content: space-around;
+    
+    align-items: center;
+    gap: 72px;
+}
+.techlogo{
+    width: 100px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.bx{
+    font-size: 40px;
+}
+.perso{
+    width: 50%;
+    height: 80%;
+}
+#section4{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    
+    
+    
+}
+#section4 h2{
+    width: 90%;
+    border: 2px solid white;
+    justify-content: center;
+    color: red;
+    margin-top: 80px;
+    text-align: center;
+    background-color: #D3D3D3;
+    border-radius: 30px;
+}
+
+.p-container{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+
+}
+.image-container {
+    position: relative;
+    border: 2px solid white;
+    border-radius: 30px;
+    width: 27%;
+    height: 45%; /* Adjust the height as needed */
+    overflow: hidden; /* Ensures no part of the image or gradient goes outside the container */
+    animation: float 3s ease-in-out infinite; /* Floating animation */
+    transition: transform 0.3s ease-in-out; /* Smooth scaling transition */
+  }
+  /* Animation for floating effect */
+@keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px); /* Moves up slightly */
+    }
+    100% {
+      transform: translateY(0); /* Returns to original position */
+    }
+  }
+  .image-container:hover {
+    transform: scale(1.05); /* Scale the entire container on hover */
+  }
+  .p-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the div without distortion */
+  }
+  .p-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers the container */
+  }
+  
+  .project-info {
+    position: absolute;
+    bottom: 0; /* Initially positioned at the bottom of the container */
+    left: 50%;
+    transform: translateX(-50%); /* Center the content horizontally */
+    color: white; /* Text color */
+    text-align: center;
+    opacity: 0;
+    transition: transform 0.5s ease, bottom 0.5s ease; /* Transition effect */
+  }
+  
+  .project-name {
+    margin: 0;
+    color: white;
+  }
+  
+  .project-link {
+    display: block;
+    margin-top: 10px;
+   text-decoration: none;
+    color: red;
+    
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease; /* Fade-in effect */
+  }
+  
+  /* Hover effect: Move the project-info to the center */
+  .image-container:hover .project-info {
+    opacity: 1;
+    bottom: 30%; /* Move to the center vertically */
+    transform: translateX(-50%) translateY(-50%); /* Move to the center of the div */
+  }
+  
+  /* On hover, also make the project link visible */
+  .image-container:hover .project-link {
+    opacity: 1; /* Make the link visible */
+  }
+  
+  .image-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, red, blue); /* Initial gradient */
+    opacity: 0.2; /* Adjust the opacity of the gradient overlay */
+    transition: background 0.3s ease; /* Smooth transition for the background */
+  }
+  
+  /* Hover effect: Change the gradient */
+  .image-container:hover::before {
+    background: linear-gradient(to bottom, purple, lightgreen); /* New gradient on hover */
+    opacity: 0.7;
+  }
+#section5{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
+}
+
+.form-box{
+    margin-top: 40px;
+    width: 80%;
+    height: 60vh;
+    display: flex;
+    
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    animation: float 3s ease-in-out infinite; /* Floating animation */
+    
+  
+}
+.information{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.feedback{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.form-box input{
+    width: 70%;
+    height: 30px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid grey;
+    border-radius: 10px;
+    align-items: center;
+
+    
+}
+.contact-links
+{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+   
+}
+.contact-links i{
+    font-size: 35px;
+    color: rgb(35, 147, 147);
+    animation: float 3s ease-in-out infinite; /* Floating animation */
+}
+.form-box:first-child{
+    font-size: 40px;
+    color: blue;
+}
+.form-box button{
+    width: 70%;
+    height: 30px;
+    color:white;
+    font-weight: bold;
+    background-color: aqua;
+    border-radius: 20px;
+    border: none;
+}
+.form-box button:hover{
+    background-color: blueviolet;
+    
+}
+#t-area{
+    width: 70%;
+    height: 70px;
+    color: white;
+    border: 1px solid grey;
+    border-radius: 10px;
+    background: transparent;resize: none;
+}
+
+
+
+.active{
+    background-color: blueviolet;
+}
+.bx:hover{
+    text-shadow: 2px 2px 4px  blueviolet ;
+    
+}
+
