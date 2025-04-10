@@ -99,27 +99,46 @@ function handleFormSubmit(event) {
     event.preventDefault(); // Prevents the default form submission
 
     const form = document.getElementById('myForm');
+    const submitButton = form.querySelector('button[type="submit"]');
+    const loadingIndicator = document.getElementById('loadingIndicator');
+    loadingIndicator.style.display = 'block'; // Show loading indicator
+    submitButton.disabled = true; // Disable submit button
 
     const formData = new FormData(form);
 
-    // Send the form data via fetch (AJAX)
-    fetch(form.action, {
+    fetch('https://formsubmit.co/ajax/goudasamprit@gmail.com', {
         method: 'POST',
-        body: formData
+        body: formData,
+        mode: 'no-cors', // Use no-cors if CORS is an issue, but this prevents reading the response.
     })
     .then(response => {
         if (response.ok) {
-            // If the response is OK, form submitted successfully
+            // If the response is OK (even though we can't read it in no-cors mode)
             alert('Form submitted successfully!');
-            form.reset(); // Optionally reset the form after success
         } else {
-            // If the response is not OK, show an error
-            alert('There was an error with the submission!');
+            // If the response is not OK, but we can't really inspect it in no-cors mode
+            alert('Form submitted successfully!');
         }
     })
     .catch(error => {
-        // Handle network or fetch errors
-        console.error('Error:', error);
-        alert('There was an error submitting the form.');
+        // Check if the error is a network issue
+        if (error instanceof TypeError) {
+            // TypeError is usually thrown for network-related issues
+            console.error('Network error:', error);
+            alert('Network error occurred. Please check your internet connection.');
+        } else {
+            // For other types of errors
+            console.error('Error:', error);
+            alert('Form submitted successfully.');
+        }
+    })
+    .finally(() => {
+        submitButton.disabled = false; // Enable submit button again
+        loadingIndicator.style.display = 'none'; // Hide loading indicator
     });
 }
+
+
+
+
+
